@@ -41,6 +41,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     max-width: 880px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .intro__title {
@@ -57,13 +58,13 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 60px;
     height: 3px;
-    margin: 60px auto 0px;
+    margin: 60px auto;
 
     background-color: #fff;
 
 }
 
-.intro__overtitle {
+.intro__suptitle {
     margin-bottom: 20px;
     color: #fff;
     font-size: 72px;
@@ -71,7 +72,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-/* Heafer */
+/* Header */
 .header {
     width: 100%;
     padding-top: 30px;
@@ -134,6 +135,83 @@ h1, h2, h3, h4, h5, h6 {
     color: #fce38a;
 }
 
-.nav__link:hover:after {
+.nav__link:hover:after,
+.nav__link.active:after {
     opacity: 1;
+}
+
+.nav__link.active {
+    color: #fce38a;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+
+    border: 3px solid #fff;
+
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+
+    transition: background-color .3s linear, color .3s linear;
+}
+
+.btn:hover {
+background-color: #fff;
+color: #333;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__item {
+    width: 23%;
+    padding: 20px 0px;
+    position: relative;
+
+    border-top: 3px solid #fff;
+    opacity: .5;
+
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.slider__item.active {
+    opacity: 1;
+}
+.slider__item.active:before {
+    content: "";
+    display: block;
+    width: 70px; 
+    height: 3px;
+
+    background-color: #f38181;
+    
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+}
+
+.slider__num {
+    font-size: 24px;
+    font-weight: 700;
 }
