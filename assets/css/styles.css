@@ -169,9 +169,9 @@ color: #333;
 /* Slider */
 .slider {
     width: 100%;
-    
+
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     z-index: 1;
 }
@@ -214,4 +214,13 @@ color: #333;
 .slider__num {
     font-size: 24px;
     font-weight: 700;
+}
+
+/* Section */
+.section {
+    padding: 80px 0;
+}
+
+.section__header {
+    margin-bottom: 40px;
 }
